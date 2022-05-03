@@ -13,7 +13,7 @@ case "$@" in
     ;;
   *Sleep) systemctl suspend; exit 0;
     ;;
-  *Logout) pkill -9 $DESKTOP_SESSION; exit 0;
+  *Logout) loginctl kill-session $XDG_SESSION_ID; exit 0;
     ;;
 esac
 
