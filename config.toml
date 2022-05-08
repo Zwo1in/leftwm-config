@@ -22,7 +22,7 @@ layouts = [
 layout_mode = "Workspace"
 insert_behavior = "Bottom"
 scratchpad = [
-  { name = "Alacritty", value = "WINIT_X11_SCALE_FACTOR=1 alacritty", x = 100, y = 50, height = 0.3, width = 1700 },
+  { name = "Alacritty", value = "alacritty", x = 0.6, y = 100, height = 0.7, width = 0.35 },
 ]
 window_rules = []
 disable_current_tag_swap = true
@@ -65,31 +65,31 @@ key = "Print"
 command = "Execute"
 value = "volumectl up"
 modifier = []
-key = "XF86AudioRaiseVolume"
+key = "XF86XK_AudioRaiseVolume"
 
 [[keybind]]
 command = "Execute"
 value = "volumectl down"
 modifier = []
-key = "XF86AudioLowerVolume"
+key = "XF86XK_AudioLowerVolume"
 
 [[keybind]]
 command = "Execute"
 value = "volumectl toggle"
 modifier = []
-key = "XF86AudioMute"
+key = "XF86XK_AudioMute"
 
 [[keybind]]
 command = "Execute"
 value = "backlightctl +"
 modifier = []
-key = "XF86MonBrightnessUp"
+key = "XF86XK_MonBrightnessUp"
 
 [[keybind]]
 command = "Execute"
 value = "backlightctl -"
 modifier = []
-key = "XF86MonBrightnessDown"
+key = "XF86XK_MonBrightnessDown"
 
 
 [[keybind]]
@@ -231,6 +231,21 @@ modifier = ["modkey"]
 key = "Left"
 
 [[keybind]]
+command = "MoveWindowToNextTag"
+value = "true"
+modifier = ["modkey", "Shift"]
+key = "l"
+
+[[keybind]]
+command = "MoveWindowToPreviousTag"
+value = "true"
+modifier = ["modkey", "Shift"]
+key = "h"
+
+
+# Boring GoTo and MoveTo all the tags
+
+[[keybind]]
 command = "GotoTag"
 value = "1"
 modifier = ["modkey"]
@@ -283,16 +298,6 @@ command = "GotoTag"
 value = "9"
 modifier = ["modkey"]
 key = "9"
-
-[[keybind]]
-command = "MoveWindowToNextTag"
-modifier = ["modkey", "Shift"]
-key = "l"
-
-[[keybind]]
-command = "MoveWindowToPreviousTag"
-modifier = ["modkey", "Shift"]
-key = "h"
 
 [[keybind]]
 command = "MoveToTag"
