@@ -5,7 +5,6 @@ tags = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
 layouts = [
   "MainAndVertStack",
   "MainAndHorizontalStack",
-  "GridHorizontal",
   "MainAndDeck",
   "GridHorizontal",
   "EvenHorizontal",
@@ -28,8 +27,14 @@ window_rules = []
 disable_current_tag_swap = true
 disable_tile_drag = false
 disable_window_snap = true
-focus_behaviour = "Sloppy"
+focus_behaviour = "Driven"
 focus_new_windows = true
+
+[[keybind]]
+command = "Execute"
+value = "firefox"
+modifier = ["modkey"]
+key = "b"
 
 [[keybind]]
 command = "Execute"
@@ -159,28 +164,52 @@ modifier = ["modkey"]
 key = "j"
 
 [[keybind]]
-command = "NextLayout"
-value = ""
-modifier = ["modkey", "Control"]
-key = "k"
+command = "DecreaseMainWidth"
+value = "1"
+modifier = ["modkey", "Shift"]
+key = "h"
 
 [[keybind]]
-command = "PreviousLayout"
-value = ""
-modifier = ["modkey", "Control"]
-key = "j"
+command = "IncreaseMainWidth"
+value = "1"
+modifier = ["modkey", "Shift"]
+key = "l"
 
 [[keybind]]
-command = "FocusWorkspaceNext"
+command = "FocusNextTag"
 value = ""
 modifier = ["modkey"]
 key = "l"
 
 [[keybind]]
-command = "FocusWorkspacePrevious"
+command = "FocusPreviousTag"
 value = ""
 modifier = ["modkey"]
 key = "h"
+
+[[keybind]]
+command = "NextLayout"
+value = ""
+modifier = ["modkey"]
+key = "d"
+
+[[keybind]]
+command = "PreviousLayout"
+value = ""
+modifier = ["modkey"]
+key = "i"
+
+[[keybind]]
+command = "FocusWorkspaceNext"
+value = ""
+modifier = ["modkey"]
+key = "n"
+
+[[keybind]]
+command = "FocusWorkspacePrevious"
+value = ""
+modifier = ["modkey"]
+key = "o"
 
 [[keybind]]
 command = "MoveWindowUp"
@@ -230,17 +259,17 @@ value = ""
 modifier = ["modkey"]
 key = "Left"
 
-[[keybind]]
-command = "MoveWindowToNextTag"
-value = "true"
-modifier = ["modkey", "Shift"]
-key = "l"
+# [[keybind]]
+# command = "MoveWindowToNextTag"
+# value = "true"
+# modifier = ["modkey", "Shift"]
+# key = "l"
 
-[[keybind]]
-command = "MoveWindowToPreviousTag"
-value = "true"
-modifier = ["modkey", "Shift"]
-key = "h"
+# [[keybind]]
+# command = "MoveWindowToPreviousTag"
+# value = "true"
+# modifier = ["modkey", "Shift"]
+# key = "h"
 
 
 # Boring GoTo and MoveTo all the tags
