@@ -9,7 +9,7 @@ case "$@" in
     ;;
   *Restart) systemctl reboot; exit 0;
     ;;
-  *Lock) slock; exit 0;
+  *Lock) coproc slock; exit 0;
     ;;
   *Sleep) systemctl suspend; exit 0;
     ;;
